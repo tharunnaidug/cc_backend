@@ -11,6 +11,7 @@ import userRoutes from "./routes/userRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
 import commentRoutes from "./routes/commentRoutes.js";
 import eventRoutes from "./routes/eventRoutes.js";
+import projectRoutes from "./routes/projectRoutes.js";
 
 
 dotenv.config();
@@ -45,6 +46,9 @@ app.use("/api/posts/:postId/comments", commentRoutes);
 
 
 app.use("/api/events", eventRoutes);
+
+app.use("/api/projects", projectRoutes);
+
 
 // 404
 app.use((req, res) => {
